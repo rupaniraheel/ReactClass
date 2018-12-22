@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Management System</title>
+  <style>
+  body{font-size:14px; font-family: Verdana, Geneva, Tahoma, sans-serif;color:darkgray;}
+  h1 , h3,h4 {color:darkgoldenrod; background-color: lightgoldenrodyellow}
+  input{font-size:14px;color:darkgoldenrod; font-family:Verdana, Geneva, Tahoma, sans-serif; border-radius: 15px; box-shadow:none; border:1px solid gray; text-align: center;}
+  table{background-color: whitesmoke; width: 30%; border:1px solid darkgoldenrod; table-layout: auto ; padding:10px; margin-left :30%; margin-right:30%; border-radius: 30px;}
+  td {width:50%;}
+.Hide{
+    display: None;
+}
+.Show{
+    display:block;
+}
+  </style>
+</head>
+<body>
+    <h1 >STUDENT MANAGEMENT SYSTEM</h1>
+    
+    
+    <div id ="studentForm" >
+            <h3 >Module 1</h3>
+    <table >
+        <tr>
+            <td>Full Name:</td>
+            <td> <input  type="text" name="Full Name" id="firstname"></td>
+        </tr>
+        <tr>
+            <td>Father Name</td>
+            <td><input type="text" name="Father Name" id ="fathername" ></td>
+        </tr>
+        <tr>
+            <td>Current Class:</td>
+            <td> <input type="text"  name="Current Class" id ="currentclass"></td>
+        </tr>
+        <tr>
+            <td>Last Class</td>
+            <td><input type="text" name="Last Class" id ="lastclass" ></td>
+        </tr> 
+        <tr>
+            <td>Current CGPA</td>
+            <td><input type="text" name="Current GPA" id ="currentgp"></td>
+        </tr> 
+        <tr>
+            <td>Roll No#</td>
+            <td><input type="text" name="Roll No" id ="rollno"></td>
+        </tr>        
+    </table>
+   <h3 >Module 2</h3>
+    <table >
+        <tr>
+            <td>Admission Fees</td>
+            <td><input type="text" name="Admission Fees" id ="admissionFee" ></td>
+        </tr>
+        <tr>
+            <td>Monthly Fees</td>
+            <td><input type="text" name="Monthly Fees" id="monthlyFee" ></td>
+        </tr>
+        <tr>
+            <td>Extracirculum Fees</td>
+            <td><input type="text" name="Extra Curriculum Fees" id ="extraFee" ></td>
+        </tr>
+        <tr>
+            <td>Game fees</td>
+            <td><input type="text" name="Game Fees" id ="gameFee"></td>
+        </tr>                     
+    </table>
+    <h3 >Module 3</h3>
+    <h4 >Mark sheet</h4>
+   <table >
+        <tr>
+            <td>Mathematics</td>
+            <td><input  type="text" name="Maths" id ="maths" ></td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td><input type="text" name="English" id ="english"></td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td><input type="text" name="Science" id ="science" ></td>
+        </tr>
+        <tr>
+            <td>Economics</td>
+            <td><input type="text" name="Economics" id="economics"></td>
+        </tr>
+        <tr>
+            <td>Accounting</td>
+            <td><input type="text" name="Accounting" id="accounting" ></td>
+        </tr>
+        <tr>
+            <td>Biology</td>
+            <td><input type="text" name="Biology" id="biology"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" onclick="showConsole()" value="Submit" ></td>
+            <td></td>
+        </tr>
+    </table>              
+</div>
+<div id ="FormData" class="Hide">
+    Thank You for Data Submission please Check your Value in Console
+</div>
+    <script>
+
+function showConsole(){
+    console.clear();
+    console.log("STUDENT INFORMATION\n\n");
+    document.getElementById("studentForm").hidden=true;
+    document.getElementById("FormData").className="Show"
+    
+    var input;  
+    var index;
+    
+    input =document.querySelectorAll("input[type=text]")
+    for (index = 0; index < input.length; ++index) {
+    console.log(input[index].name +" = "+ input[index].value)
+}
+    
+    
+    
+    
+    
+}
+
+
+    </script>
+</body>
+</html>
